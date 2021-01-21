@@ -1,0 +1,5 @@
+<a routerLink="home" class="border-default m-10 bg-green cursor-pointer">Home</a>
+<a routerLink="projects" class="border-default m-10 bg-orange cursor-pointer">Projects</a>
+<a routerLink="labels" class="border-default m-10 bg-blue cursor-pointer">Labels</a>
+<a routerLink="home" [queryParams]="{mode: 'thisweek'}" class="border-default m-10 cursor-pointer">This Week</a>
+<router-outlet></router-outlet>

@@ -1,0 +1,19 @@
+<div class="border-default m-10">
+
+    <h3>Edit a task</h3>
+    title: <input [(ngModel)]="task.title" required>
+    project: <select [(ngModel)]="task.project">
+        <option *ngFor="let project of projects" [ngValue]="project">{{project.title}}</option>
+    </select>
+    labels: <select [(ngModel)]="task.labels" multiple>
+        <option *ngFor="let label of labels" [ngValue]="label" [style.backgroundColor]="label.color">{{label.title}}
+        </option>
+    </select>
+    Deadline: <input [(ngModel)]="task.deadline" type="datetime-local" [min]="minTaskDeadline">
+    Priority: <select [(ngModel)]="task.priority">
+        <option value="6"></option>
+        <option *ngFor="let priority of taskPriorities | keyvalue" [value]="priority.value">{{priority.key}}</option>
+    </select>
+
+    <button (click)="saveTask()" type="submit">Save</button>
+</div>

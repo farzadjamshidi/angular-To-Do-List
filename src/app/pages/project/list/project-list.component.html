@@ -1,0 +1,6 @@
+<div class="border-default m-10">
+    <h3>Project list</h3>
+    <div>
+        <p [routerLink]="['/project', project.id]" *ngFor="let project of projects" class="cursor-pointer">{{project.title}}</p>
+    </div>
+</div>

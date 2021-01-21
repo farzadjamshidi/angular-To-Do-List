@@ -1,0 +1,15 @@
+<div class="container flex-column">
+
+    <div>
+        <app-task-create></app-task-create>
+    </div>
+    <div class="flex-row">
+        <div class="flex-50">
+            <app-project-list></app-project-list>
+        </div>
+        <div class="flex-50">
+            <app-task-list [tasksMode]="tasksMode"></app-task-list>
+        </div>
+    </div>
+
+</div>

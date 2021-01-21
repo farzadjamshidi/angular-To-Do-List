@@ -1,0 +1,97 @@
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.margin-v-auto{
+    margin: auto 0px;
+}
+
+.visibility-hidden{
+    visibility: hidden;
+}
+
+@for $i from 0 to 20 {
+
+    .flex-#{$i * 5}{
+        flex: #{$i / 2};
+    }
+    .font-size-#{$i * 2}{
+        font-size: #{$i * 2}px;
+    }
+}
+
+@for $i from 0 to 50 {
+
+    .width-#{$i * 5}{
+        width: #{$i * 5}px;
+    }
+    .p-#{$i * 5}{
+        padding: #{$i * 5}px;
+    }
+    .m-#{$i * 5}{
+        margin: #{$i * 5}px;
+    }
+
+    .mv-#{$i * 5}{
+        margin: 0px #{$i * 5}px;
+    }
+
+    .mh-#{$i * 5}{
+        margin: #{$i * 5}px 0px;
+    }
+
+    .ml-#{$i * 5}{
+        margin-left: #{$i * 5}px;
+    }
+
+    .mr-#{$i * 5}{
+        margin-right: #{$i * 5}px;
+    }
+
+    .mb-#{$i * 5}{
+        margin-bottom: #{$i * 5}px;
+    }
+}
+
+.regularInput{
+
+    border: 1px solid #707070;
+    border-radius: 4px;
+    height: 40px;
+}
+
+.regularBtn{
+    border: 1px solid #707070;
+    border-radius: 3px;
+    color: #FFFFFF;
+    height: 44px;
+}
+
+.bg-blue{
+    background-color :  #1586FB;
+}
+
+.bg-orange{
+    background-color :  #FD8323;
+}
+
+.bg-green{
+    background-color :  #55C22C;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;    
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.align-spaceBetween-center{
+    justify-content: space-between;
+    align-items: center;
+}
+.border-default{
+    border: 1px solid black;
+    border-radius: 5px;
+}

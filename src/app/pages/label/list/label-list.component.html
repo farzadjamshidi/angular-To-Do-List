@@ -1,0 +1,5 @@
+<app-label-create></app-label-create>
+
+<div>
+    <p [routerLink]="['/label', label.id]" class="width-100 cursor-pointer" [style.backgroundColor]="label.color" *ngFor="let label of labels">{{label.title}}</p>
+</div>

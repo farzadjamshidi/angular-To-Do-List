@@ -1,0 +1,15 @@
+<div class="border-default m-5">
+    <div class="flex-row align-spaceBetween-center p-5">
+        <span [routerLink]="['/project', task.project.id, 'task', task.id]" class="font-size-24 cursor-pointer">{{task.title}}</span>
+        <span>{{taskPriorityEnum[task.priority]}}</span>
+        <span [routerLink]="['/project', task.project.id]" class="cursor-pointer">{{task.project.title}}</span>
+    </div>
+    <div class="flex-row">
+        <span class="mr-15">{{task.deadline | timeZoneDate}}</span>
+        <span [routerLink]="['/label', label.id]" *ngFor="let label of task.labels" [style.backgroundColor]="label.color" class="mr-5 cursor-pointer">
+            {{label.title}}
+        </span>
+    </div>
+</div>
+
+<button [routerLink]="['/project', task.project.id, 'task', task.id, 'edit']" class="cursor-pointer">Edit</button>
